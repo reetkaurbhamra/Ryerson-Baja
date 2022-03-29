@@ -1,3 +1,3 @@
 # Ryerson-Baja
 
-Arduino Code can be found here
+Arduino and Python code can be found here
