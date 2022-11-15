@@ -3,15 +3,6 @@ from dash import Dash, html, dcc, Input, Output
 import dash_daq as daq
 
 
-# def set_interval(func, sec):
-#     def func_wrapper():
-#         set_interval(func, sec)
-#         func()
-#     t = threading.Timer(sec, func_wrapper)
-#     t.start()
-#     return t
-
-
 app = Dash()
 app.layout = html.Div([
     daq.Gauge(
@@ -44,7 +35,7 @@ app.layout = html.Div([
 
 @app.callback(Output('gauge', 'value'), Input('interval', 'n_intervals'))
 def update_output(i):
-    return round(i * math.pi / 10, 2)
+    return round(i * math.pi / 10, 2) # change this to arduino values
 
 
 if __name__ == '__main__':
